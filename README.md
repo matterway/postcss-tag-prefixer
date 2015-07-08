@@ -5,7 +5,6 @@
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
 
 [PostCSS](https://github.com/postcss/postcss) plugin which replaces tag names with classes.
 
