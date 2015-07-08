@@ -1,0 +1,45 @@
+{
+  "name": "postcss-tag-prefixer",
+  "version": "1.0.0",
+  "author": "Mikhail Davydov i@azproduction.ru",
+  "description": "Replaces tag names in css files with classes",
+  "contributors": [
+    {
+      "name": "Mikhail Davydov",
+      "email": "i@azproduction.ru"
+    }
+  ],
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "tag-rename"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ProductiveMobile/postcss-tag-prefixer.git"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "postcss": "^4.1.16",
+    "postcss-selector-parser": "^1.1.2"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "coveralls": "^2.11.2",
+    "husky": "^0.8.1",
+    "istanbul": "^0.3.17",
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "jshint . && jscs . && mocha -R spec",
+    "coverage": "istanbul cover node_modules/.bin/_mocha --report html -- -R spec",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls",
+    "precommit": "npm test"
+  }
+}

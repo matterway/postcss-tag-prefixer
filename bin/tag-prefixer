@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+var program = require('commander');
+var postcss = require('postcss');
+var createTagPrefixer = require('..');
+
+program
+  .version('1.0.0')
+  .option('-p, --prefix [prefix]', 'Prefix', String, 'b-')
+  .parse(process.argv);
+
+var css = '';
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(data) {
+  css += String(data);
+});
+
+process.stdin.on('end', function() {
+  var tagPrefixer = createTagPrefixer({prefix: program.prefix});
+
+  postcss([tagPrefixer])
+    .process(css)
+    .then(function(result) {
+      process.stdout.write(result.css);
+    });
+});

@@ -1,0 +1,15 @@
+{
+  "preset": "airbnb",
+  "disallowMultipleLineBreaks": null,
+  "requirePaddingNewLinesAfterBlocks": null,
+  "requireCamelCaseOrUpperCaseIdentifiers": null,
+  "maximumLineLength": {
+    "value": 80,
+    "allowUrlComments": true
+  },
+  "excludeFiles": [
+    ".git/**",
+    "node_modules/**",
+    "coverage/**"
+  ]
+}
