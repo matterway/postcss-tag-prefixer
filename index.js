@@ -17,6 +17,10 @@ function createPrefixer(prefix) {
         return;
       }
 
+      if (node.parent.type === 'pseudo') {
+        return;
+      }
+
       node.nodes.forEach(function(node) {
         if (node.type !== 'tag') {
           return;

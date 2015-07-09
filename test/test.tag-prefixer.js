@@ -27,4 +27,15 @@ describe('postcss-tag-prefixer', function() {
           .to.equal('.b-a .b-b .b-c,.b-d .b-e > .b-f[g] {}');
       });
   });
+
+  it.only('should not touch pseudo elements arguments', function() {
+    var tagPrefixer = createTagPrefixer();
+
+    return postcss([tagPrefixer])
+      .process('a:nth-of-type(n+1),b:not(:nth-of-type(even)) {}')
+      .then(function(result) {
+        expect(result.css)
+          .to.equal('.b-a:nth-of-type(n+1),.b-b:not(:nth-of-type(even)) {}');
+      });
+  });
 });
