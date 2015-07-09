@@ -8,6 +8,12 @@
 
 [PostCSS](https://github.com/postcss/postcss) plugin which replaces tag names with classes.
 
+## What is it created for?
+
+Some CSS-libraries like Bootstrap or Foundation are using selectors matching
+tag names, which could be in the conflict (they break CSS isolation) with your components.
+`postcss-tag-prefixer` automatically appends prefixes to bare tag names.
+
 ```css
 a b c,
 d e f[g] {}
