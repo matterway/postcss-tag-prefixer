@@ -28,7 +28,7 @@ describe('postcss-tag-prefixer', function() {
       });
   });
 
-  it.only('should not touch pseudo elements arguments', function() {
+  it('should not touch pseudo elements arguments', function() {
     var tagPrefixer = createTagPrefixer();
 
     return postcss([tagPrefixer])
