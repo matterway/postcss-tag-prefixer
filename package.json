@@ -1,6 +1,6 @@
 {
   "name": "postcss-tag-prefixer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mikhail Davydov i@azproduction.ru",
   "description": "Replaces tag names in css files with classes",
   "contributors": [
